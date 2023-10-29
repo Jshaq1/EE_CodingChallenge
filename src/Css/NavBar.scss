@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'NeueMontreal-Medium';
+  src: local('NeueMontreal-Medium'),
+       url('../Assets//Fonts/NeueMontreal-Medium.woff') format('woff');
+}
+  @font-face {
+    font-family: 'SportingGrotesque-Bold';
+    src: local('SportingGrotesque-Bold'),
+         url('.././Assets/Fonts/SportingGrotesque-Bold.woff') format('woff');
+  
+  }
+  @font-face {
+    font-family: 'SportingGrotesque-Regular';
+    src: local('SportingGrotesque-Regular'),
+         url('.././Assets/Fonts/SportingGrotesque-Regular.woff') format('woff');
+  
+  }
+ 
+
+header{
+    display: flex;
+    padding: 1em 0 1em 0;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    text-align: center;
+    border-bottom: 1px solid grey;
+
+  
+
+    .logo{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-family: 'SportingGrotesque-Bold';
+        font-size: 1em;
+        position: relative;
+      
+       
+
+        h2{
+            margin: 0;
+        }
+    }
+
+   .nav-links{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 2em;
+    margin: 0 1em 0 1em;
+    font-family: 'NeueMontreal-Medium';
+    font-size: .9em;
+    color: rgb(80, 80, 80);
+    position: relative;
+
+    .my-products-tally{
+      margin-left: -1.5em;
+      background-color: black;
+      color: white;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'NeueMontreal-Medium';
+      font-size: .9em;
+    }
+
+   }
+}
+
+
+@media (max-width: 1000px){
+  header{
+      margin-bottom: 0;
+      flex-direction: column;
+      align-items: center;
+
+  }
+}
+

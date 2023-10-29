@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Clearface-Regular';
+    src: local('Clearface-Regular'),
+         url('.././Assets/Fonts/Clearface-Regular.woff') format('woff');
+  
+  }
+  @font-face {
+    font-family: 'SportingGrotesque-Bold';
+    src: local('SportingGrotesque-Bold'),
+         url('.././Assets/Fonts/SportingGrotesque-Bold.woff') format('woff');
+  
+  }
+  @font-face {
+    font-family: 'SportingGrotesque-Regular';
+    src: local('SportingGrotesque-Regular'),
+         url('.././Assets/Fonts/SportingGrotesque-Regular.woff') format('woff');
+  
+  }
+
+  @font-face {
+    font-family: 'NeueMontreal-Medium';
+    src: local('NeueMontreal-Medium'),
+         url('../Assets//Fonts/NeueMontreal-Medium.woff') format('woff');
+  }
+
+body{
+    padding: 0 2em 0 2em;
+}
+
+.body-container{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding-top: 2em;
+    
+}
+
+@media (max-width: 1000px){
+    .body-container{
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        gap: 3em;
+        
+    }
+}
+
+ul>li{
+    list-style: none;
+}
+
+h4{
+    font-family: 'NeueMontreal-Medium';
+}
+
+h3{
+    font-family: 'NeueMontreal-Medium';
+}
+
+
+p{
+    font-family: 'NeueMontreal-Light';
+}
+
+li{
+    font-family: 'NeueMontreal-Medium';
+}
+
+

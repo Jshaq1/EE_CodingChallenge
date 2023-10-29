@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'NeueMontreal-Light';
+    src: local('NeueMontreal-Light'),
+         url('../Assets//Fonts/NeueMontreal-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NeueMontreal-Medium';
+    src: local('NeueMontreal-Medium'),
+         url('../Assets//Fonts/NeueMontreal-Medium.woff') format('woff');
+}
+
+*{
+    box-sizing: border-box;
+}
+a:link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+
+
+
+.product-list-container{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3em;
+    overflow: hidden;
+    align-items: center;
+
+    .products-card{
+        display: grid;
+        grid-template-rows: 75% 25%;
+        max-width: 300px;
+        margin: auto;
+        text-align: left;
+        font-family: arial;
+        height: 40vh;
+        max-height: 350px;
+        border-radius: 20px;
+        position: relative;
+        gap: 1em;
+        
+        .product-link-container{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            align-items: left;
+
+            h3{
+                text-align: left;
+                    margin: 0;
+                    font-family: 'NeueMontreal-Medium';
+                    font-size: 1em;
+                } 
+
+
+
+            .title-container{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+           
+        }
+
+        .favourite-btn{
+            text-align: right;
+
+        }
+        .image-container{
+            width: 100%;
+            height: 90%;
+            
+            img{
+                object-fit: contain;
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    
+        .card-details{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+
+                      
+            
+            .price-likebtn{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p{
+                    margin: 0;
+                }
+
+                h3{
+                    text-align: left;
+                        margin: 0;
+                        font-family: 'NeueMontreal-Light';
+                        font-size: 1em;
+                        font-kerning: none;
+                    } 
+            }
+
+            .title-price-container{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            text-decoration: none;
+            text-align: left;
+
+            
+        
+            p{
+                margin: 0;
+            }
+            }
+    }
+    }
+}
+
+
+@media (max-width: 1000px){
+    .product-list-container{
+        width: 100%;
+        align-items: center;
+    }
+}
