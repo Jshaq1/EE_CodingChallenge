@@ -17,6 +17,7 @@ const ProductsList = ({ productsData }) => {
 
     const handlePageChange = (event, value) => {
         setCurrentPage(value)
+        // handleSetApiLimit(endIndex)
     }
 
 

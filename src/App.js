@@ -8,11 +8,14 @@ import { GlobalProvider } from './Context/MyProductsContext';
 import ErrorLoading from './Components/Utilities/ErrorLoading';
 
 
+//Commented out is pagination scaling, calling API with new limit to handle larger scale API returns. 
+
 
 const App = () => {
   const [APIData, setAPIData] = useState()
   const [isLoading, setIsloading] = useState(true)
   const [apiError, setApiError] = useState(false)
+  // const [ApiLimit, setApiLimit] = useState(5)
 
   const location = useLocation();
   const bodyStyle = {
@@ -22,9 +25,8 @@ const App = () => {
 
   }
 
-
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products')
+    axios.get(`https://fakestoreapi.com/products`)
       .then(res => {
         const data = res.data
         setAPIData(data)
@@ -37,9 +39,14 @@ const App = () => {
         setTimeout(() => {
           setIsloading(false);
         }, 1000);
+
       }
       )
   }, [])
+
+  // const handleSetApiLimit = (paginationIndex) => {
+  //   ApiLimit !== 20 && setApiLimit(paginationIndex + 5)
+  // }
 
   const sortProducts = (sortParam) => {
     const APIDataCopy = [...APIData]
@@ -50,7 +57,6 @@ const App = () => {
 
       APIDataCopy.sort((a, b) => a[sortParam] - b[sortParam])
     }
-
     setAPIData(APIDataCopy)
   };
 
