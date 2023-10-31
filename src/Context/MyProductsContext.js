@@ -16,7 +16,7 @@ export const GlobalProvider = props => {
 
 
     const addProductToList = productDetails => {
-        if (!state.favProductsList.some(product => product.id == productDetails.id)) {
+        if (!state.favProductsList.some(product => product.id === productDetails.id)) {
             dispatch({ type: 'ADD_PRODUCT_TO_LIST', payload: productDetails })
 
         }
